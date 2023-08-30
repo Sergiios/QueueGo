@@ -2,11 +2,10 @@
   <h1>GoQueue 📨</h1>
 </div>
 
-
-O objetivo principal é criar uma biblioteca simples de Publish/Subscribe em Go.
+A Biblioteca QueueGo simula um sistema de fila em Go. A estrutura possibilita a publicação e inscrição em tópicos, enquanto também armazena as mensagens em arquivos de log separados por tópico.
 
 <div style="text-align: center;">
-  <h2>Como utilizar ? 😃</h2>
+  <h2>Como utilizar ?</h2>
 </div>
 
 Pré requisitos:
@@ -21,7 +20,16 @@ go get "github.com/Sergiios/QueueGo"
 
 Exemplo de uso:
 
-```Go  
+```Go
+package main
+
+import (
+	"fmt"
+	"time"
+
+	QueueGo "github.com/Sergiios/QueueGo"
+)
+
 fuc main() {
 
 	Queue := NewQueueGo()
