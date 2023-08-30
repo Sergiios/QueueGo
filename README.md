@@ -32,7 +32,7 @@ import (
 
 fuc main() {
 
-	Queue := NewQueueGo()
+	Queue := QueueGo.NewQueueGo()
 
 	subscriber1 := Queue.Subscribe("topic1")
 	subscriber2 := Queue.Subscribe("topic2")
