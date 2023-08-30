@@ -27,7 +27,7 @@ import (
 	"fmt"
 	"time"
 
-	QueueGo "github.com/Sergiios/QueueGo"
+	QueueGo "github.com/Sergiios/QueueGo/src/QueueGo"
 )
 
 func main() {
