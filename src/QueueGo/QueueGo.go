@@ -97,29 +97,3 @@ func (b *QueueGo) Subscribe(queue string) <-chan Message {
 
 	return ch
 }
-
-func main() {
-
-	Queue := NewQueueGo()
-
-	subscriber1 := Queue.Subscribe("topic1")
-	subscriber2 := Queue.Subscribe("topic2")
-
-	go func() {
-		for message := range subscriber1 {
-			log.Println("Subscriber 1 - Topic: ", message.Topic, " Content: ", message.Content, " Timestamp: ", message.Timestamp)
-		}
-	}()
-
-	go func() {
-		for message := range subscriber2 {
-			log.Println("Subscriber 2 - Topic: ", message.Topic, " Content: ", message.Content, " Timestamp: ", message.Timestamp)
-		}
-	}()
-
-	Queue.Publish("topic1", "Message 1 for Topic 1", true, []string{"message1", "message2"})
-	Queue.Publish("topic2", "Message 1 for Topic 2", false, []int{1, 2, 3, 4, 5})
-
-	time.Sleep(time.Second * 10)
-
-}
