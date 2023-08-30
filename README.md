@@ -30,7 +30,7 @@ import (
 	QueueGo "github.com/Sergiios/QueueGo"
 )
 
-fuc main() {
+func main() {
 
 	Queue := QueueGo.NewQueueGo()
 

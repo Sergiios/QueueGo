@@ -1,4 +1,4 @@
-package QueueGo
+package main
 
 import (
 	"encoding/json"
